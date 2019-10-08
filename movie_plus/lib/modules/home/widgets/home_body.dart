@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:movie_plus/modules/home/home_bloc.dart';
 
 class HomeBody extends StatefulWidget {
-  HomeBody({Key key}) : super(key:key);
+  HomeBloc homeBloc;
+
+  HomeBody({Key key, @required this.homeBloc}) : super(key:key);
 
   @override
   _HomeBodyState createState() => _HomeBodyState();
