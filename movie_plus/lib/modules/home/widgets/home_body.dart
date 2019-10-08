@@ -10,10 +10,15 @@ class HomeBody extends StatefulWidget {
 class _HomeBodyState extends State<HomeBody> {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        
-      ],
+    return FutureBuilder(
+      future: null,
+      builder: (context, snapshot) {
+        return Stack(
+            children: <Widget>[
+
+            ]
+        );
+      },
     );
   }
 }
