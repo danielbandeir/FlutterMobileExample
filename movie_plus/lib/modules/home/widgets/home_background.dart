@@ -9,21 +9,25 @@ class HomeBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          fit: BoxFit.cover,
-          image: AssetImage(
-            imageUrl
-          )
-        )
-      ),
-      child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 11, sigmaY: 11),
-        child: Container(
-          decoration: BoxDecoration(color: Colors.black.withOpacity(0.3)),
+    return Stack(
+      children: <Widget>[
+        Container(
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(
+                      imageUrl
+                  )
+              )
+          ),
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 11, sigmaY: 11),
+            child: Container(
+              decoration: BoxDecoration(color: Colors.black.withOpacity(0.3)),
+            ),
+          ),
         ),
-      ),
+      ],
     );
   }
 }
